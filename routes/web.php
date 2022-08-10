@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 // Route::group(['middleware' => ['auth']], function () {
 //     Route::get('dashboard', [DashboardController::class, 'index']);
 //     // Route::get('dashboard', 'DashboardController@index')->name('index');
@@ -26,4 +28,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::resource('products', ProductController::class);
+
 require __DIR__.'/auth.php';
+
