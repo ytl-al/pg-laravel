@@ -29,19 +29,19 @@
         <div class="col-lg-12">
             <div class="form-group">
                 <label for="input-name">Name:</label>
-                <input type="text" class="form-control" id="input-name" name="name" placeholder="Product Name" value="" />
+                <input type="text" class="form-control" id="input-name" name="name" placeholder="Product Name" value="{{ $product->name }}" />
             </div>
         </div>
         <div class="col-lg-12">
             <div class="form-group">
                 <label for="input-price">Price (MYR):</label>
-                <input type="text" class="form-control" id="input-price" name="price" placeholder="0.00" value="" />
+                <input type="text" class="form-control" id="input-price" name="price" placeholder="0.00" value="{{ number_format($product->price, 2) }}" />
             </div>
         </div>
         <div class="col-lg-12">
             <div class="form-group">
                 <label for="input-details">Details:</label>
-                <textarea class="form-control" id="input-details" name="details" placeholder="Product Details"></textarea>
+                <textarea class="form-control" id="input-details" name="details" placeholder="Product Details">{{ $product->details }}</textarea>
             </div>
         </div>
         <div class="col-lg-12">
